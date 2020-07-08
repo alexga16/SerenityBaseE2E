@@ -27,10 +27,7 @@ public class FacebookSteps {
 
     @Cuando("el usuario inicia sesion con credenciales erradas")
     public void elUsuarioIniciaSesionConCredencialesErradas() {
-        OnStage.theActorInTheSpotlight()
-                .attemptsTo(
-                        IniciarFacebook.enPaginaPrincipal()
-                );
+      
     }
 
     @Entonces("se valida que se informe el inicio de sesion fallido")
