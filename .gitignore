@@ -280,3 +280,9 @@ buildNumber.properties
 
 # End of https://www.gitignore.io/api/vim,java,macos,emacs,gradle,intellij,sublimetext,visualstudiocode
 serenity-cucumber-starter.iml
+
+*.html
+
+*.xml
+
+*.json
