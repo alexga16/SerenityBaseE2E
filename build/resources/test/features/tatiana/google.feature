@@ -9,4 +9,4 @@ Feature: Busquedas desde pagina principal google
   Scenario:  Busqueda en google por palabra
     Given que el "usuario" esta en la pagina de google
     When  el usuario busca por la palabra "musica"
-    Then se valida que el primer titulo tenga la palabra musica
+    Then se valida que el primer titulo y la descripcion tenga la palabra musica

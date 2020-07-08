@@ -1,6 +1,8 @@
 package co.com.nombreproyecto.stepsdefinitions;
 
+import co.com.nombreproyecto.tasks.BuscarGoogle;
 import co.com.nombreproyecto.tasks.IniciarGoogle;
+import co.com.nombreproyecto.tasks.Validacion;
 import co.com.nombreproyecto.ui.PaginaPrincipalGoogle;
 import co.com.nombreproyecto.ui.PaginaResultados;
 import cucumber.api.java.Before;
@@ -32,15 +34,15 @@ public class GoogleSteps {
     public void elUsuarioBuscaPorLaPalabra(String palabraClave) {
         OnStage.theActorInTheSpotlight()
                 .attemptsTo(
-                        Enter.theValue(palabraClave).into(PaginaPrincipalGoogle.CAMPO_TEXTO_BUSCAR),
-                        Click.on(PaginaPrincipalGoogle.BOTON_BUSCAR)
+                        BuscarGoogle.porPalabra(palabraClave)
                 );
     }
 
-    @Then("se valida que el primer titulo tenga la palabra musica")
-    public void seValidaQueElPrimerTituloTengaLaPalabraMusica() {
+    @Then("se valida que el primer titulo y la descripcion tenga la palabra musica")
+    public void seValidaQueElPrimerTituloYLaDescripcionTengaLaPalabraMusica() {
         OnStage.theActorInTheSpotlight()
                 .attemptsTo(
-                        Ensure.that(PaginaResultados.PRIMER_RESULTADO_MUSICA).text().isEqualToIgnoringCase("Musica - YouTube"));
+                        Validacion.primerResultado("musica")
+                );
     }
 }
