@@ -1,5 +1,3 @@
-@Frontend:testExample
-@example
 
 Feature: Busquedas desde pagina principal google
 

@@ -38,11 +38,19 @@ public class GoogleSteps {
                 );
     }
 
+<<<<<<< HEAD
     @Then("se valida que el primer titulo y la descripcion tenga la palabra musica")
     public void seValidaQueElPrimerTituloYLaDescripcionTengaLaPalabraMusica() {
         OnStage.theActorInTheSpotlight()
                 .attemptsTo(
                         Validacion.primerResultado("musica")
                 );
+=======
+    @Then("se valida que el primer titulo tenga la palabra musica")
+    public void seValidaQueElPrimerTituloTengaLaPalabraMusica() {
+        OnStage.theActorInTheSpotlight()
+                .attemptsTo(
+                        Ensure.that(PaginaResultados.PRIMER_RESULTADO_MUSICA).text().isEqualToIgnoringCase("Musica - YouTube"));
+>>>>>>> master
     }
 }
