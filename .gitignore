@@ -286,3 +286,5 @@ serenity-cucumber-starter.iml
 *.xml
 
 *.json
+
+*.bin
