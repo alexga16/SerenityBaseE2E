@@ -3,7 +3,7 @@
 Característica: : Login en pagina git hub
 
   Yo como usuario
-  quiero realizar login en la pagina pagina git hub
+  quiero realizar login en la pagina  gitlab
   para validar el ingreso correcto o errado al sistema
 
   @github

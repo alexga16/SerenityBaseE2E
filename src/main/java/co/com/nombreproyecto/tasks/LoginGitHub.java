@@ -10,7 +10,6 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.Keys;
-
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class LoginGitHub implements Task {
@@ -18,13 +17,12 @@ public class LoginGitHub implements Task {
     public static Performable iniciar() {
         return instrumented(LoginGitHub.class);
     }
-
     @Override
     @Step("{0} intenta iniciar sesion con credenciales erradas")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Enter.theValue("hgfgfghfghf").into(GitHubLoginPage.CAMPO_TEXTO_USUARIO),
-                Enter.theValue("jkhkgg").into(GitHubLoginPage.CAMPO_TEXTO_CLAVE),
+                Enter.theValue("jhgjhgjhgjhg").into(GitHubLoginPage.CAMPO_TEXTO_USUARIO),
+                Enter.theValue("jhgjhgjhgjhg").into(GitHubLoginPage.CAMPO_TEXTO_CLAVE),
                 Click.on(GitHubLoginPage.BOTON_LOGIN)
         );
     }

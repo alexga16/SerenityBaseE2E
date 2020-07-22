@@ -17,7 +17,7 @@ public class GitHubLoginPage extends PageObject {
     public static final Target CAMPO_TEXTO_CLAVE=Target.the("Campo de texto clave")
             .located(By.id("password"));
 
-    public static final Target BOTON_LOGIN=Target.the("Boton login github")
+    public static final Target BOTON_LOGIN=Target.the("boton login github")
             .located(By.name("commit"));
 }
 

@@ -1,7 +1,6 @@
 package co.com.nombreproyecto.tasks;
 
 import co.com.nombreproyecto.ui.GitHubLoginPage;
-import co.com.nombreproyecto.ui.PaginaPrincipalGoogle;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
@@ -12,8 +11,8 @@ import net.thucydides.core.annotations.Step;
 public class IniciarGitHub implements Task {
     private GitHubLoginPage gitHubLoginPage;
 
-    public static Performable enLogin() {
-        return Instrumented.instanceOf(IniciarGitHub.class).newInstance();
+    public static Performable enlogin() {
+        return Instrumented.instanceOf( IniciarGitHub.class).newInstance();
     }
 
     @Override
@@ -24,4 +23,3 @@ public class IniciarGitHub implements Task {
         );
     }
 }
-
